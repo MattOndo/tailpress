@@ -1,0 +1,25 @@
+div#icon-wrap {
+  position: relative;
+  display: inline-block;
+}
+div#icon-wrap:after {
+  content: '';
+  border-radius: 100px;
+  box-shadow: 0 0 40px #fff;
+  width: 50%;
+  height: 50%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+.single-post .menu-item.archive,
+.current-menu-item {
+  /* @apply bg-slate; */
+  @apply text-teal;
+}
+body:has(#wpadminbar) #site-header {
+  top: 32px;
+}

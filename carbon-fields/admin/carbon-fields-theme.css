@@ -1,0 +1,58 @@
+/* Text w/Image Field Group */
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body,
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto auto auto auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "options-header options-header"
+    "button-options image-options"
+    "content-header content-header"
+    "content-image content-headline"
+    "content-image-width content-text"
+    "content-image-height content-text"
+    "content-buttontext content-buttonlink"; 
+}
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .options-header,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .options-header { grid-area: options-header; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .button-options,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .button-options { grid-area: button-options; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .image-options,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .image-options { grid-area: image-options; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-header,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-header { grid-area: content-header; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-image,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-image { grid-area: content-image; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-image-width,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-image-width { grid-area: content-image-width; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-image-height,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-image-height { grid-area: content-image-height; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-headline,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-headline { grid-area: content-headline; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-text,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-text { grid-area: content-text; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-buttontext,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-buttontext { grid-area: content-buttontext; }
+.cf-complex__group input[value="card-image"] ~ .cf-complex__group-body .content-buttonlink,
+.cf-complex__group input[value="text-image"] ~ .cf-complex__group-body .content-buttonlink { grid-area: content-buttonlink; }
+
+.container-carbon_fields_container_page_hero .cf-container__fields {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: auto auto auto auto auto auto; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "content-headline content-headline"
+    "content-subheadline content-subheadline"
+    "image-display content-image"
+    "image-alignment content-image-width"
+    "image-alignment content-image-height"
+}
+.container-carbon_fields_container_page_hero .cf-container__fields .image-display { grid-area: image-display; }
+.container-carbon_fields_container_page_hero .cf-container__fields .image-alignment { grid-area: image-alignment; }
+.container-carbon_fields_container_page_hero .cf-container__fields .content-image { grid-area: content-image; }
+.container-carbon_fields_container_page_hero .cf-container__fields .hero-image-width { grid-area: content-image-width; }
+.container-carbon_fields_container_page_hero .cf-container__fields .hero-image-height { grid-area: content-image-height; }
+.container-carbon_fields_container_page_hero .cf-container__fields .content-headline { grid-area: content-headline; }
+.container-carbon_fields_container_page_hero .cf-container__fields .content-subheadline { grid-area: content-subheadline; }
